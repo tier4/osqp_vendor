@@ -12,8 +12,6 @@ macro(build_osqp)
     list(APPEND extra_cmake_args -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE})
   endif()
 
-  list(APPEND extra_cmake_args -DBUILD_SHARED_LIBS=ON)
-
   include(ExternalProject)
   externalproject_add(osqp-v0.6.1.dev0
     GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
