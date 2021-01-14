@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 
 project(osqp_vendor)
 
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED)
 
 macro(build_osqp)
   set(extra_cmake_args)
@@ -35,12 +35,7 @@ endmacro()
 
 build_osqp()
 
-ament_export_libraries(osqp)
-ament_export_dependencies(osqp)
-
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
-endif()
-
-ament_package(CONFIG_EXTRAS osqp_vendor-extras.cmake)
+catkin_package(
+  LIBRARIES osqp
+  DEPENDS osqp
+  CFG_EXTRAS osqp_vendor-extras.cmake)
