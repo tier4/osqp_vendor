@@ -13,9 +13,9 @@ macro(build_osqp)
   endif()
 
   include(ExternalProject)
-  externalproject_add(osqp-v0.6.1.dev0
+  externalproject_add(osqp-v0.6.2
     GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
-    GIT_TAG v0.6.1.dev0
+    GIT_TAG v0.6.2
     GIT_SHALLOW ON
     TIMEOUT 60
     CMAKE_ARGS
