@@ -5,6 +5,7 @@ project(osqp_vendor)
 find_package(ament_cmake REQUIRED)
 
 macro(build_osqp)
+  set(git_tag "v0.6.2")
   set(extra_cmake_args)
 
   get_property(multi_config GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
@@ -13,9 +14,9 @@ macro(build_osqp)
   endif()
 
   include(ExternalProject)
-  externalproject_add(osqp-v0.6.1.dev0
+  externalproject_add(osqp-${git_tag}
     GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
-    GIT_TAG v0.6.1.dev0
+    GIT_TAG ${git_tag}
     GIT_SHALLOW ON
     TIMEOUT 60
     CMAKE_ARGS
