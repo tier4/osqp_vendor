@@ -30,6 +30,7 @@ macro(build_osqp)
       ${CMAKE_CURRENT_BINARY_DIR}/osqp_install/
     DESTINATION
       ${CMAKE_INSTALL_PREFIX}
+    USE_SOURCE_PERMISSIONS
     PATTERN config.h EXCLUDE
   )
 endmacro()
