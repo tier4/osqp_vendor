@@ -2,8 +2,8 @@
 Changelog for package osqp_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2021-12-07)
+------------------
 * Suppress update of pinned git repository (`#8 <https://github.com/tier4/osqp_vendor/issues/8>`_)
   The source at that ref will never change, so there is no need to try to
   update it. This will avoid unnecessary invalidation of the build and
