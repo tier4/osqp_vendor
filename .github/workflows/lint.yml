@@ -39,4 +39,4 @@ jobs:
         with:
           linter: ${{ matrix.linter }}
           distribution: ${{ matrix.ros_distribution }}
-          package-name: osqp_vendor
+          package-name: osqp_vendors

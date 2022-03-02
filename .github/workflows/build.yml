@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: ros-tooling/action-ros-ci@v0.2
         with:
-          package-name: osqp_vendor
+          package-name: osqp_vendors
           target-ros2-distro: ${{ matrix.ros_distribution }}
           colcon-defaults: |
             {
