@@ -39,6 +39,7 @@ endmacro()
 
 build_osqp()
 
+ament_export_include_directories(include)
 ament_export_libraries(osqp)
 ament_export_dependencies(osqp)
 

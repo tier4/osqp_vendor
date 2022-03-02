@@ -42,8 +42,9 @@ endmacro()
 
 build_osqp_eigen()
 
+ament_export_include_directories(include)
 ament_export_libraries(OsqpEigen)
-ament_export_dependencies(osqp eigen3_cmake_module Eigen3)
+ament_export_dependencies(OsqpEigen osqp eigen3_cmake_module Eigen3)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
