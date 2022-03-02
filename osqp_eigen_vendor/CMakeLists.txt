@@ -36,7 +36,6 @@ macro(build_osqp_eigen)
     DESTINATION
       ${CMAKE_INSTALL_PREFIX}
     USE_SOURCE_PERMISSIONS
-    PATTERN *.hpp
   )
 endmacro()
 

@@ -33,7 +33,6 @@ macro(build_osqp)
     DESTINATION
       ${CMAKE_INSTALL_PREFIX}
     USE_SOURCE_PERMISSIONS
-    PATTERN config.h EXCLUDE
   )
 endmacro()
 
