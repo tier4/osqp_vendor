@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.5)
 project(osqp_eigen_vendor)
 
 find_package(ament_cmake REQUIRED)
-find_package(osqp REQUIRED)
+find_package(osqp_vendor REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 
@@ -43,7 +43,7 @@ build_osqp_eigen()
 
 ament_export_include_directories(include)
 ament_export_libraries(OsqpEigen)
-ament_export_dependencies(OsqpEigen osqp eigen3_cmake_module Eigen3)
+ament_export_dependencies(OsqpEigen osqp_vendor eigen3_cmake_module Eigen3)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
