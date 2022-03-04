@@ -1,5 +1,0 @@
-repositories:
-  osqp_vendors:
-    type: git
-    url: https://github.com/tier4/osqp_vendor.git
-    version: main
