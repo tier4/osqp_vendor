@@ -21,8 +21,6 @@ FetchContent_MakeAvailable(OsqpEigen)
 ament_export_targets(OsqpEigenTargets HAS_LIBRARY_TARGET)
 ament_export_dependencies(osqp_vendor eigen3_cmake_module Eigen3)
 
-# multiple uninstall targets: https://github.com/actor-framework/actor-framework/issues/866
-# fix in yarp: https://github.com/robotology/ycm/pull/237
 install(
   TARGETS OsqpEigen
   EXPORT OsqpEigenTargets
