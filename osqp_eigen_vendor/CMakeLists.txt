@@ -7,7 +7,7 @@ find_package(osqp_vendor REQUIRED)
 find_package(eigen3_cmake_module REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-set(git_tag "master")
+set(git_tag "header-fault")
 
 include(FetchContent)
 FetchContent_Declare(
