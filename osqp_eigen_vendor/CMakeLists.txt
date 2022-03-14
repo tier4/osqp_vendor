@@ -18,12 +18,15 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(OsqpEigen)
 
-ament_export_targets(OsqpEigenTargets HAS_LIBRARY_TARGET)
-ament_export_dependencies(osqp_vendor eigen3_cmake_module Eigen3)
+ament_export_targets(OsqpEigenVendorTargets HAS_LIBRARY_TARGET)
+ament_export_dependencies(osqp_vendor eigen3_cmake_module Eigen3 OsqpEigen)
+
+add_library(osqp_eigen_vendor INTERFACE)
+target_link_libraries(osqp_eigen_vendor INTERFACE OsqpEigen)
 
 install(
-  TARGETS OsqpEigen
-  EXPORT OsqpEigenTargets
+  TARGETS osqp_eigen_vendor 
+  EXPORT OsqpEigenVendorTargets
 )
 
 if(BUILD_TESTING)

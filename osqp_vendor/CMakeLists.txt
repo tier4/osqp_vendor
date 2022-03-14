@@ -15,11 +15,15 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(osqp)
 
-ament_export_targets(osqpTargets HAS_LIBRARY_TARGET)
+ament_export_targets(osqpVendorTargets HAS_LIBRARY_TARGET)
+ament_export_dependencies(osqp)
+
+add_library(osqp_vendor INTERFACE)
+target_link_libraries(osqp_vendor INTERFACE osqp::osqp)
 
 install(
-  TARGETS osqp
-  EXPORT osqpTargets
+  TARGETS osqp_vendor
+  EXPORT osqpVendorTargets
 )
 
 if(BUILD_TESTING)
