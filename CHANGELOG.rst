@@ -2,8 +2,8 @@
 Changelog for package osqp_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.0 (2022-10-23)
+------------------
 * feat: enable to build with both ros1 and ros2 (`#16 <https://github.com/tier4/osqp_vendor/issues/16>`_)
   * feat: enable to build with both ros1 and ros2
   * fix github action
