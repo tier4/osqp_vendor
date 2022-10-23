@@ -2,7 +2,13 @@ cmake_minimum_required(VERSION 3.9)
 
 project(osqp_vendor)
 
-find_package(ament_cmake REQUIRED)
+find_package(ros_environment REQUIRED)
+
+if($ENV{ROS_VERSION} EQUAL 1)
+  find_package(catkin REQUIRED)
+elseif($ENV{ROS_VERSION} EQUAL 2)
+  find_package(ament_cmake REQUIRED)
+endif()
 
 macro(build_osqp)
   set(git_tag "v0.6.2")
@@ -15,7 +21,7 @@ macro(build_osqp)
 
   include(ExternalProject)
   externalproject_add(osqp-${git_tag}
-    GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
+    GIT_REPOSITORY https://github.com/osqp/osqp.git
     GIT_TAG ${git_tag}
     GIT_SHALLOW ON
     TIMEOUT 60
@@ -39,12 +45,19 @@ endmacro()
 
 build_osqp()
 
-ament_export_libraries(osqp)
-ament_export_dependencies(osqp)
+if($ENV{ROS_VERSION} EQUAL 1)
+  catkin_package(
+    LIBRARIES osqp
+    DEPENDS osqp
+    CFG_EXTRAS osqp_vendor-extras.cmake)
+elseif($ENV{ROS_VERSION} EQUAL 2)
+  ament_export_libraries(osqp)
+  ament_export_dependencies(osqp)
 
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  ament_lint_auto_find_test_dependencies()
+  if(BUILD_TESTING)
+    find_package(ament_lint_auto REQUIRED)
+    ament_lint_auto_find_test_dependencies()
+  endif()
+
+  ament_package(CONFIG_EXTRAS cmake/osqp_vendor-extras.cmake)
 endif()
-
-ament_package(CONFIG_EXTRAS osqp_vendor-extras.cmake)
