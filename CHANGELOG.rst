@@ -2,6 +2,13 @@
 Changelog for package osqp_vendor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* feat: enable to build with both ros1 and ros2 (`#16 <https://github.com/tier4/osqp_vendor/issues/16>`_)
+  * feat: enable to build with both ros1 and ros2
+  * fix github action
+* Contributors: Daisuke Nishimatsu
+
 0.0.4 (2021-12-07)
 ------------------
 * Suppress update of pinned git repository (`#8 <https://github.com/tier4/osqp_vendor/issues/8>`_)
