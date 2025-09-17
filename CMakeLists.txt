@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.9)
+cmake_minimum_required(VERSION 3.18)
 
 project(osqp_vendor)
 
@@ -11,7 +11,7 @@ elseif($ENV{ROS_VERSION} EQUAL 2)
 endif()
 
 macro(build_osqp)
-  set(git_tag "v0.6.2")
+  set(git_tag "v1.0.0")
   set(extra_cmake_args)
 
   get_property(multi_config GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
