@@ -5,7 +5,7 @@ project(osqp_vendor)
 find_package(ament_cmake REQUIRED)
 
 macro(build_osqp)
-  set(git_tag "v0.6.3")
+  set(git_tag "v1.0.0")
   set(extra_cmake_args)
 
   get_property(multi_config GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
