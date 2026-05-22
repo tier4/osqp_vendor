@@ -6,11 +6,11 @@
   <description>
     Wrapper around osqp that ships with a CMake module
   </description>
-  <maintainer email="esteve.fernandez@autoware.org">Esteve Fernandez</maintainer>
+  <maintainer email="ryohsuke.mitsudome@tier4.jp">Ryohsuke Mitsudome</maintainer>
   <license>Apache License 2.0</license>
 
   <url type="website">https://github.com/oxfordcontrol/osqp</url>
-  <author email="esteve.fernandez@autoware.org">Esteve Fernandez</author>
+  <author email="esteve@apache.org">Esteve Fernandez</author>
 
 
   <buildtool_depend>ament_cmake</buildtool_depend>
