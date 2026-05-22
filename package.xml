@@ -9,7 +9,7 @@
   <maintainer email="esteve.fernandez@autoware.org">Esteve Fernandez</maintainer>
   <license>Apache License 2.0</license>
 
-  <url type="website">https://github.com/oxfordcontrol/osqp</url>
+  <url type="website">https://github.com/osqp/osqp</url>
   <author email="esteve.fernandez@autoware.org">Esteve Fernandez</author>
 
 
